@@ -1,0 +1,71 @@
+const{DataTypes}=require("sequelize")
+const database=require("../database")
+
+const theme = database.define("theme",{
+    
+    idtheme:{
+        type:DataTypes.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+    },
+    header_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    header_color2:{
+        type:DataTypes.STRING,
+    },
+    header_title_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    content_background_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    footer_background_color1:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    footer_background_color2:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    footer_title_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    footer_icon_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    state:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    content_title_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    content_subtitle_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    content_description_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    content_button_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    button_text_color:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+},{
+    tableName:"theme",
+    timestamps:false,
+})
+
+module.exports=theme
